@@ -1,0 +1,185 @@
+body{
+    background-color:skyblue;
+}
+.container{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    height: 97.6vh;
+}
+.wrapper{
+    border: 1px solid transparent;
+    border-radius: 15px;
+    /* background-color: white; */
+    padding: 20px;
+    background-color: rgb(254 202 202);
+
+}
+
+.error, .incorrect{
+    display: none;
+    padding: 2px;
+    background-color: white;
+}
+.animateError{
+    animation-name: shift1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.animateIncorrect{
+    animation-name: shift2;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes shift1 {
+    0%{
+        margin-left: 0%;
+    }
+    50%{
+        margin-left: 41%;
+    }
+    100%{
+        margin-right: 0%;
+    }
+}
+@keyframes shift2 {
+    0%{
+        margin-left: 0%;
+    }
+    50%{
+        margin-left: 29%;
+    }
+    100%{
+        margin-right: 0%;
+    }
+}
+
+@media (max-width : 1000px) {
+    .container{
+        margin: auto ;
+        display: flex;
+        height: 90vh;
+        align-items: center;
+        justify-content: center;
+    }
+    .wrapper{
+        padding: 10px;
+    
+    }
+    .enter{
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 97%;
+        justify-content: center;
+        margin-bottom: 2px;
+    }
+    .enter input{
+        padding: 3px;
+        font-size: 0.5rem;
+        margin-bottom: 10px;
+    }
+    .weather{
+        font-size: .2rem;
+        font-weight: normal;
+    }
+    .celcius{
+        font-size: 4rem;
+        column-gap: 20px;
+    }
+    #degree{
+        font-size: 2rem;
+    }
+    .c{
+        font-size: 0.3rem;
+        margin-bottom: 2px;
+    }
+    .animateError{
+        animation-name: none;
+    }
+    .animateIncorrect{
+        animation-name: none;
+    }
+    .error, .incorrect{
+        display: none;
+        text-align: center;
+        padding: 2px;
+        background-color: white;
+    }
+}
+
+.weather{
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+.enter{
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    margin-bottom: 8px;
+}
+.enter input{
+    padding: 7px;
+    font-family: 'Source Sans Pro', sans-serif;
+    border-radius: 9px;
+    outline: none;
+    font-size: 1rem;
+}
+.cloud{
+    width: 300px;
+    margin: auto;
+
+}
+.cloud img{
+    display: block;
+    margin: 0 auto;
+}
+
+.celcius{
+    font-size: 5rem;
+    font-weight: bold;
+    display: flex;
+    column-gap: 20px;
+    justify-content: center;
+}
+#degree{
+    font-size: 2.5rem;
+    justify-items: flex-start;
+}
+.c{
+    font-size: 4rem;
+    align-self: flex-end;
+    margin-bottom: 2.5px;
+}
+.weather-description{ 
+    font-size: 1.7rem;
+    margin-bottom: 6px;
+    text-align: center;
+}
+.location{
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.showtime{
+    display: none;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin-bottom: 13px;
+}
+button{
+    font-size: 1rem;
+    padding: 5px;
+    cursor: pointer;
+
+}
+.timeButton{
+    font-size: 0.7rem;
+    padding: 3px;
+    cursor: pointer;
+}
+
